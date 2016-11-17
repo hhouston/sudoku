@@ -68,6 +68,14 @@ class SudokuGame
     board.solved?
   end
 
+  def parse_pos(string)
+    string.split(",").map { |el| el.to_i }
+  end
+
+  def parse_val(string)
+    string.to_i
+  end
+
   def valid_pos?(pos)
     pos.is_a?(Array) &&
       pos.length == 2 &&
